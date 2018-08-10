@@ -7,7 +7,7 @@ using System.Configuration;
 public class email : IHttpHandler
 {
 
-    private String emailServer = "smtp.sendgrid.net";
+    private String emailServer = ConfigurationManager.AppSettings["SMTPServer"];
     private Boolean emailServerSSL = true;
     private String mailTo = ConfigurationManager.AppSettings["EmailTo"];
     private String mailBcc = ConfigurationManager.AppSettings["EmailBcc"];
