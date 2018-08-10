@@ -37,7 +37,7 @@ public class email : IHttpHandler
             
             message.To.Add(mailTo);
             message.Subject = mailSubject;
-            message.From = new System.Net.Mail.MailAddress("noreply@thealliancenetwork.co.uk");
+            message.From = new System.Net.Mail.MailAddress(mailFrom);
             
             if (String.IsNullOrEmpty(data["email"]))
             {
