@@ -10,6 +10,7 @@ public class email : IHttpHandler
     private String emailServer = ConfigurationManager.AppSettings["SMTPServer"];
     private Boolean emailServerSSL = true;
     private String mailTo = ConfigurationManager.AppSettings["EmailTo"];
+    private String mailFrom = ConfigurationManager.AppSettings["EmailFrom"];
     private String mailBcc = ConfigurationManager.AppSettings["EmailBcc"];
     private String mailSubject = "The Alliance Network Contact Form";
 
