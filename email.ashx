@@ -77,7 +77,7 @@ public class email : IHttpHandler
             retobj.Error = ex.Message;
             try
             {
-                client.Send("noreply@thealliancenetwork.co.uk", mailBcc, "Alliance Network Error", ex.ToString());
+                client.Send(mailFrom , mailBcc, "Alliance Network Error", ex.ToString());
             }
             catch (Exception)
             {
