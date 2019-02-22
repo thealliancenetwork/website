@@ -45,7 +45,7 @@ public class email : IHttpHandler
             }
             else
             {
-                message.CC.Add(data["email"]);
+                //message.CC.Add(data["email"]);
                 
                 //if (String.IsNullOrEmpty(data["name"]))
                 //{
