@@ -63,7 +63,7 @@ public class email : IHttpHandler
             }
             else
             {
-                message.Body = "Message from " + data["email"] +"\r\n\r\n" + data["message"];
+                message.Body = "Message from " + data["name"] + " " + data["email"] +"\r\n\r\n" + data["message"];
                 message.IsBodyHtml = false;
             }
             
