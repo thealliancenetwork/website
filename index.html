@@ -704,7 +704,7 @@ Part of our general mailing list to get updates on events, new member organisati
                                 </div>
 				<div class="form-group">
 						       <p><i><small>In accordance with General Data Protection Regulation ((EU) 2016/679) we will only hold and use your personal information as set out in our data privacy policy, a copy of which can be found here: <a href="https://careers.hays.co.uk/privacy-policy/" style="color:white; text-decoration:underline">https://careers.hays.co.uk/privacy-policy/</a>.</small></i></p>
-				<p><input type="checkbox" id="gdpr_check" name="gdpr_check"> <small>Please tick this box to show that you have read and understood the terms of our data privacy policy and are happy for us to use your personal data to keep you informed about our upcoming events. You are free to opt out of such communications at any time.</small></p>		       
+				<p><input type="checkbox" id="gdpr_check" name="gdpr_check" required> <small>Please tick this box to show that you have read and understood the terms of our data privacy policy and are happy for us to use your personal data to keep you informed about our upcoming events. You are free to opt out of such communications at any time.</small></p>		       
 				</div>
                                 <button type="submit" class="btn btn-primary" id="emailFormSubmit">Send Message</button>
                             </form>
@@ -747,7 +747,6 @@ Part of our general mailing list to get updates on events, new member organisati
     <!--Ajax email form submit-->
     <script type="text/javascript">
         $('#emailForm').submit(function (e) {
-	if(document.getElementById('gdpr_check').checked) {
             $('#emailFormSubmit').attr('disabled', 'disabled');
             $('#emailFormSubmit').hide();
 
@@ -780,7 +779,6 @@ Part of our general mailing list to get updates on events, new member organisati
                 }
             });
             e.preventDefault();
-	} else { alert("You must accept our data handling & privacy policy."); return false; }
         });
     </script>
 </body>
