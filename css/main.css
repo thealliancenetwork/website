@@ -671,3 +671,8 @@ ul.nostyle i {
 .cal-event {
     height: 150px;	
 }
+.vcenter {
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
+}
