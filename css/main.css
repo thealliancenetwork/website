@@ -668,3 +668,6 @@ ul.nostyle i {
 	text-align:left;
 	margin-right:-4px;
 }
+.cal-event {
+    height: 150px;	
+}
