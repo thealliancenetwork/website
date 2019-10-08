@@ -707,6 +707,9 @@ Part of our general mailing list to get updates on events, new member organisati
                                 <div class="form-group">
                                     <input type="email" name="email" class="form-control" placeholder="Email" required>
                                 </div>
+                                <div class="form-group" style="display: none;">
+                                    <input type="email" name="email2" class="form-control" placeholder="Re-enter email">
+                                </div>
                                 <div class="form-group">
                                     <textarea name="message" class="form-control" rows="8" wrap="virtual" placeholder="Message" required></textarea>
                                 </div>
@@ -761,10 +764,13 @@ Part of our general mailing list to get updates on events, new member organisati
             $('#emailError').hide();
             $('#emailSuccess').hide();
 
+            var formData = $('#emailForm').serializeArray();
+            formData[formData.length] = {name:"antiSpam",value:"ValidUser"};
+
             $.ajax({
                 type: "POST",
                 url: "email.ashx",
-                data: $('#emailForm').serialize(),
+                data: formData,
                 success: function(data) {
                     if (data.Success == true) {
                         $('#emailForm').each(function () {

@@ -24,6 +24,9 @@ public class email : IHttpHandler
         context.Response.ContentType = "application/json";
         var client = new System.Net.Mail.SmtpClient(emailServer);
         
+        if (!String.IsNullOrEmpty(data["email2"])) { context.Response.Write(json.Serialize(retobj)); return; }
+        if (data["antiSpam"] != "ValidUser") { context.Response.Write(json.Serialize(retobj));  return ; }
+
         try
         {            
             client.EnableSsl = emailServerSSL;
